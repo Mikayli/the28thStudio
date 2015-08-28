@@ -1,0 +1,180 @@
+<html> 
+	<head>
+	<title> Discover Artist | the28th Studio</title>
+	<h1> the28th Studio </h1>
+	<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Akronim' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+	<script src = "http://connect.soundcloud.com/sdk.js"></script>
+	<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<style>
+	html{
+		background-image: url("ideas10.png");
+				no-repeat center center fixed; 
+				webkit-background-size: cover;
+				moz-background-size: cover;
+				o-background-size: cover;
+				background-size: cover;
+				}
+	h1{
+	font-size: 500%;
+	font-family: 'Poiret One', cursive;
+	text-align: right;
+	}
+	
+	#discButton {
+	position: absolute;
+    top: 300px;
+	left: 440px;
+    height: 375px;
+    width: 380px;
+    border-radius: 500px;
+    border: 3px solid #33CCFF;
+	font-family:'Poiret One', cursive;
+	font-size: 400%
+	
+	}
+	#EDM {
+	position: absolute;
+	top: 60px;
+	left: 420px;
+	height: 250px;
+	width: 250px;
+	border-radius: 350px;
+	background-color: #00FF00;
+	border: 3px solid #33CCFF
+	font-family:'Poiret One', cursive;
+	font-size: 400%
+	}
+	#Pop{
+	position: absolute;
+	top: 225px;
+	left: 225px;
+	height: 250px;
+	width: 250px;
+	border-radius: 350px;
+	background-color:#FF0066;
+	font-family:'Poiret One', cursive;
+	font-size: 400%
+	
+	}
+	#Alternative{
+	 position: absolute;
+    left: 205px;
+    top: 470px;
+	height: 250px;
+	width: 250px;
+	border-radius: 350px;
+	background-color: #CC66FF;
+	font-family:'Amatic SC', cursive;
+	font-size: 400%
+	}
+	#Country{
+	position: absolute;
+	top: 100px;
+	left: 670px;
+	height: 250px;
+	width:250px;
+	border-radius: 350px;
+	background-color:#E86C19;
+	font-family:'Akronim', cursive;
+	font-size: 400%
+	}
+	#Reggae{
+	position: absolute;
+	top: 300px;
+	left: 810px;
+	height: 250px;
+	width:250px;
+	border-radius: 350px;
+	background-color: #66FFCC;
+	color: #FF6600;
+	font-family:'Caesar Dressing', cursive;
+	font-size: 400%
+	}
+	#Hip-Hop{
+	position: absolute;
+	top: 550px;
+	left: 755px;
+	height: 250px;
+	width: 250px;
+	border-radius: 350px;
+	background-color: #0A1A14;
+	color: #E6E8E8;
+	font-family:'Bad Script', cursive;
+	font-size: 400%
+	}
+	
+	</style>
+	
+	<script>
+		var randomlinks=["EDM","Pop","Alternative","Country","Reggae","Hip-Hop"];				//new Array()					
+
+		randomlinks[0]="file:///C:/Users/GWCStudent/Documents/THE28THSTUDIO/ARTIST%20BIO.html"
+		randomlinks[1]="http://javascriptkit.com"
+		randomlinks[2]="http://dynamicdrive.com"
+		randomlinks[3]="http://cnn.com"
+		randomlinks[4]="http://www.geocities.com"
+		randomlinks[5]="http://google.com"
+		function randomlink(){
+		window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
+		}
+	
+	</script>
+	
+	
+	</head>
+		<body>
+		<form> 
+		
+			<button class="button" id="EDM">EDM </button>
+			<button class="button" id="Pop"> POP</button> 	
+			<button class="button" id="Alternative">Alternative </button>	
+			<button class="button" id="Country" >Country </button>	
+			<button class="button" id="Reggae">Reggae </button>	
+			<button class="button" id="Hip-Hop">Hip-Hop </button>	
+		</form>
+		<script>
+		<!--
+		/*
+		Random link button- By JavaScript Kit (http://javascriptkit.com)
+		Over 300+ free scripts!
+		This credit MUST stay intact for use
+		*/
+		//specify random links below. You can have as many as you want
+		
+
+</script>
+<form method="post">
+<p><input type="button" id="discButton"name="button" value="Discover Artist"onclick="randomlink()"></p> </form>
+
+<!--Uncomment below to use a regular text link instead
+<a href="javascript:randomlink()">Random Link</a>
+-->
+		
+
+	
+	</script>
+	<!--<script>
+		SC.initialize({
+	client_id: 'e8b3e29f6ab5c32cfcb296f5fff6f31d',
+	redirect_uri: 'http://localhost:8000/callback.html'
+	});
+	$(document).ready(function(){
+		$('#discButton').click(function(e){
+		console.log("gjrighergh")
+			e.preventDefault();
+			SC.connect(function(){
+			console.log("lol");
+				SC.get('/tracks', { limit: page_size, genres: 'POP', bpm: {from: 120} }, function(tracks) {
+				console.log(tracks);
+				});
+			});	
+		});		
+	});
+	</script>-->
+		</body>
+</html>
